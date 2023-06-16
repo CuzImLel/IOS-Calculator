@@ -34,6 +34,7 @@ resetbutton.addEventListener("click", function() {
 
 
 point.addEventListener("click", function() {
+    if (!resultbox.innerText.includes(".")) {
     if (secondnumber == null && firstnumber != null) {
         firstnumber+=".";
         resultbox.innerText = firstnumber;
@@ -50,6 +51,7 @@ point.addEventListener("click", function() {
         secondnumber = "0.";
         resultbox.innerText = secondnumber;
     }
+}
 });
 
 numpad.forEach((num) => {
